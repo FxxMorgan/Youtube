@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Descargar Video</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com/2.2.17/tailwind.min.css">
+  <style>
+    /* Estilos adicionales personalizados */
+    body {
+      background-color: #f3f4f7;
+    }
+    
+    .container {
+      margin-top: 50px;
+    }
+    
+    .form-label {
+      font-weight: bold;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ced4da;
+    }
+    
+    #logoContainer {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    #progressBar {
+      margin-top: 20px;
+    }
+    
+    #downloadButton {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto">
+    <h1 class="text-2xl font-bold mt-8 mb-4">Descargar Video</h1>
+  
+    <form method="POST" action="/">
+      <div class="mb-4">
+        <label for="videoUrl" class="form-label">URL del video:</label>
+        <input type="text" id="videoUrl" name="video_url" class="form-control">
+      </div>
+    
+      <div id="logoContainer" class="mb-4">
+        {% if page_icon %}
+          <img src="{{ page_icon }}" alt="Logo de la página" width="64" height="64">
+        {% endif %}
+      </div>
+    
+      <progress id="progressBar" value="0" max="100" class="w-full h-4 bg-blue-200"></progress>
+    
+      <button id="downloadButton" class="btn btn-primary mt-4">Descargar</button>
+    </form>
+  </div>
+
+  <script>
+    // Tu código JavaScript aquí
+  </script>
+</body>
+</html>
