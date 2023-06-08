@@ -5,6 +5,8 @@ from PIL import Image
 from bs4 import BeautifulSoup
 import youtube_dl
 
+# -*- coding: utf-8 -*-
+
 app = Flask(__name__)
 
 # Configuración de opciones de descarga
